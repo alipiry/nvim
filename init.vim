@@ -61,7 +61,7 @@ nmap <leader>F :GFiles?<CR>
 
 nmap gs  <plug>(GrepperOperator)
 
-set mouse=
+set mouse=a
 set completeopt=menu,menuone,preview,noselect,noinsert
 
 nmap <silent> gd <Plug>(coc-definition)
