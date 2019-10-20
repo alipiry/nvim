@@ -6,13 +6,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
-Plug '~/.fzf' | Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'justinmk/vim-sneak'
-Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
@@ -32,11 +32,9 @@ set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨," eol:↲,nb
 set list
 
 " Theme
-" let g:onedark_termcolors=256
+let g:gruvbox_contrast_dark = 'hard'
 set background=dark
-colorscheme onedark
-hi SpecialKey ctermfg=8
-set termguicolors
+colorscheme gruvbox
 set cc=80
 
 " 1 tab == 2 spaces
@@ -46,7 +44,7 @@ set tabstop=2
 
 " Plugins
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'gruvbox'
 
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 1
