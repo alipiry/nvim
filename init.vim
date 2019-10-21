@@ -33,6 +33,7 @@ set number
 set showbreak=↪\
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨," eol:↲,nbsp:·,
 set list
+set hidden
 
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
