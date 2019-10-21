@@ -80,3 +80,4 @@ noremap <Leader>b :History<CR>
 noremap <Leader>t :tabnew <CR>
 noremap <Leader>n :tabnext <CR>
 nmap <BS> -
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
