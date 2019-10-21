@@ -1,6 +1,5 @@
 set shell=bash
 
-" Plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -16,6 +15,10 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'tpope/vim-commentary'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -27,22 +30,18 @@ set history=1000
 
 set number
 
-set showbreak=↪\ 
+set showbreak=↪\
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨," eol:↲,nbsp:·,
 set list
 
-" Theme
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 colorscheme gruvbox
 set cc=80
 
-" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 
-
-" Plugins
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'gruvbox'
 
@@ -50,12 +49,6 @@ let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 1
 
 let g:sneak#use_ic_scs = 1
-
-let mapleader = ","
-let g:mapleader = ","
-
-nmap <leader>f :GFiles<CR>
-nmap <leader>F :GFiles?<CR>
 
 nmap gs  <plug>(GrepperOperator)
 
@@ -71,3 +64,19 @@ autocmd BufWritePre *.go :CocCommand editor.action.organizeImport
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+map <C-n> <Plug>NERDTreeTabsToggle<CR>
+noremap <C-S> :Ag<CR>
+noremap <C-f> :FZF<CR>
+noremap <C-w><C-q> :q!<CR>
+nmap <Leader>/ <Plug>CommentaryLine
+noremap <Leader>gs :GFiles?<CR>
+noremap <Leader>gl :Commits<CR>
+noremap <Leader>gch :Gread <CR>
+noremap <Leader>ga :Gwrite <CR>
+noremap <Leader>gco :Gcommit <CR>
+noremap <Leader>df :Gdiff <CR>
+noremap <Leader>b :History<CR>
+noremap <Leader>t :tabnew <CR>
+noremap <Leader>n :tabnext <CR>
+nmap <BS> -
