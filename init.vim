@@ -98,6 +98,7 @@ map <Leader>1 :bnext<CR>
 map <Leader>2 :bprevious<CR>
 nmap <Leader>cf  <Plug>(coc-fix-current)
 noremap <Leader>f :CocFix<CR>
+nmap <Leader>r :e<CR>
 
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
