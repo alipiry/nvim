@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -75,12 +76,13 @@ set updatetime=300
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 autocmd BufWritePre *.go :CocCommand editor.action.organizeImport
 
-nmap <leader>w :w<cr>
 nmap <BS> -
 map <C-n> <Plug>NERDTreeTabsToggle<CR>
 noremap <C-S> :Ag<CR>
 noremap <C-f> :FZF<CR>
-noremap <C-w><C-q> :q!<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q<CR>
+noremap <Leader>Q :q!<CR>
 noremap <Leader>gs :GFiles?<CR>
 noremap <Leader>gl :Commits<CR>
 noremap <Leader>gch :Gread <CR>
@@ -91,9 +93,9 @@ noremap <Leader>b :History<CR>
 noremap <Leader>t :tabnew <CR>
 noremap <Leader>n :tabnext <CR>
 nmap <silent> gd <Plug>(coc-definition)
-map <leader>i :bnext<cr>
-map <leader>o :bprevious<cr>
-nmap <leader>cf  <Plug>(coc-fix-current)
+map <Leader>1 :bnext<CR>
+map <Leader>2 :bprevious<CR>
+nmap <Leader>cf  <Plug>(coc-fix-current)
 noremap <Leader>f :CocFix<CR>
 
 inoremap <silent><expr> <TAB>
