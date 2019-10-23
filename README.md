@@ -1,5 +1,9 @@
 # My NEOVIM configuration
 
+## Screenshot
+
+![2019-10-23 03 48 52](https://user-images.githubusercontent.com/25138854/67345530-38bef580-f548-11e9-82b4-7f1e5d6e3584.jpg)
+
 ## Usage
 
 Clone the repo and do the following commands:
