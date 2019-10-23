@@ -70,7 +70,7 @@ set tw=160
 set ai
 set si
 set wrap
-
+set updatetime=300
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 autocmd BufWritePre *.go :CocCommand editor.action.organizeImport
@@ -93,3 +93,16 @@ noremap <Leader>n :tabnext <CR>
 nmap <silent> gd <Plug>(coc-definition)
 map <leader>i :bnext<cr>
 map <leader>o :bprevious<cr>
+nmap <leader>cf  <Plug>(coc-fix-current)
+noremap <Leader>f :CocFix<CR>
+
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
