@@ -21,7 +21,7 @@ Now the only thing you should do is open your `NEOVIM` and run `:PlugInstall`:
 
 To customize your nvim, edit the cloned `init.vim`:
 ```bash
-	vim ~/nvim/init.vim
+	nvim ~/nvim/init.vim
 ```
 
 ## Author
