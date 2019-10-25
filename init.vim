@@ -45,8 +45,6 @@ set hidden
 set completeopt=menu,menuone,preview,noselect,noinsert
 set mouse=a
 set encoding=utf8
-let $LANG='en'
-set langmenu=en
 set ruler
 set hid
 set ignorecase
@@ -70,7 +68,6 @@ set ai
 set si
 set wrap
 set updatetime=300
-set cmdheight=2
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 autocmd BufWritePre *.go :CocCommand editor.action.organizeImport
