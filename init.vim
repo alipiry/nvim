@@ -11,8 +11,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 
@@ -78,7 +76,6 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 autocmd BufWritePre *.go :CocCommand editor.action.organizeImport
 
 nmap <BS> -
-map <C-n> <Plug>NERDTreeTabsToggle<CR>
 noremap <C-S> :Ag<CR>
 noremap <C-f> :FZF<CR>
 nmap <Leader>w :w<CR>
