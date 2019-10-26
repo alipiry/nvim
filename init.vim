@@ -21,6 +21,7 @@ syntax enable
 filetype plugin on
 filetype indent on
 
+set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 colorscheme gruvbox
