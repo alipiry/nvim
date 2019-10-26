@@ -43,7 +43,7 @@ set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨," eol:↲,nbsp:·,
 set list
 set hidden
 set completeopt=menu,menuone,preview,noselect,noinsert
-set mouse=a
+set mouse=
 set encoding=utf8
 set ruler
 set hid
