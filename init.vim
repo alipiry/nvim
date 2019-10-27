@@ -68,7 +68,7 @@ set tw=160
 set ai
 set si
 set wrap
-set updatetime=300
+set updatetime=100
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 autocmd BufWritePre *.go :CocCommand editor.action.organizeImport
