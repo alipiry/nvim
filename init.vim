@@ -16,7 +16,7 @@ Plug 'tpope/vim-commentary'
 
 call plug#end()
 
-syntax enable
+syntax on
 
 filetype plugin on
 filetype indent on
@@ -40,7 +40,7 @@ set tabstop=2
 set number
 set history=1000
 set showbreak=↪\
-set listchars=nbsp:␣,trail:•,extends:⟩,precedes:⟨," eol:↲,nbsp:·,
+set listchars=tab:\ \ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨," eol:↲,nbsp:·,
 set list
 set hidden
 set completeopt=menu,menuone,preview,noselect,noinsert
