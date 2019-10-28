@@ -71,7 +71,7 @@ set wrap
 set updatetime=100
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-autocmd BufWritePre *.go :CocCommand editor.action.organizeImport
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 au BufEnter * set fo-=c fo-=r fo-=o
 
 nmap <BS> -
