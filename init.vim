@@ -93,6 +93,12 @@ nmap 1 1gt
 nmap 2 2gt
 nmap 3 3gt
 noremap <TAB> :tabNext<CR>
+noremap <Leader><TAB> :bNext<CR>
+noremap <Leader>D :bd<CR>
+nmap <C-w><Left> <C-w>h
+nmap <C-w><Down> <C-w>j
+nmap <C-w><Up> <C-w>k
+nmap <C-w><Right> <C-w>l
 
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
