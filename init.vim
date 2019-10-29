@@ -13,6 +13,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 
@@ -26,11 +27,11 @@ let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 colorscheme gruvbox
 
-let g:airline_powerline_fonts = 1
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 let g:airline_theme = 'gruvbox'
-
-let g:javascript_plugin_flow = 1
-let g:jsx_ext_required = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:rainbow_active = 1
 
 set autoread
 set cc=80
@@ -70,10 +71,6 @@ set si
 set wrap
 set updatetime=100
 
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-au BufEnter * set fo-=c fo-=r fo-=o
-
 nmap <BS> -
 noremap <C-S> :Ag<CR>
 noremap <C-f> :FZF<CR>
@@ -82,19 +79,20 @@ nmap <Leader>q :q<CR>
 noremap <Leader>Q :q!<CR>
 noremap <Leader>gs :GFiles?<CR>
 noremap <Leader>gl :Commits<CR>
-noremap <Leader>gch :Gread <CR>
-noremap <Leader>ga :Gwrite <CR>
-noremap <Leader>gco :Gcommit <CR>
-noremap <Leader>df :Gdiff <CR>
+noremap <Leader>gch :Gread<CR>
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gco :Gcommit<CR>
+noremap <Leader>df :Gdiff<CR>
 noremap <Leader>b :History<CR>
-noremap <Leader>t :tabnew <CR>
-noremap <Leader>n :tabnext <CR>
+noremap <Leader>t :tabnew<CR>
 nmap <silent> gd <Plug>(coc-definition)
-map <Leader>1 :bnext<CR>
-map <Leader>2 :bprevious<CR>
 nmap <Leader>cf  <Plug>(coc-fix-current)
 noremap <Leader>f :CocFix<CR>
 nmap <Leader>r :e<CR>
+nmap 1 1gt
+nmap 2 2gt
+nmap 3 3gt
+noremap <TAB> :tabNext<CR>
 
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
@@ -106,3 +104,6 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+au BufEnter * set fo-=c fo-=r fo-=o
