@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'luochen1990/rainbow'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
 
@@ -114,3 +115,4 @@ endfunction
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 au BufEnter * set fo-=c fo-=r fo-=o
+autocmd BufWritePre,InsertLeave *.js Prettier
