@@ -93,7 +93,7 @@ nmap 1 1gt
 nmap 2 2gt
 nmap 3 3gt
 noremap <TAB> :tabNext<CR>
-noremap <Leader><TAB> :bNext<CR>
+noremap <Leader><TAB> :bnext<CR>
 noremap <Leader><S-TAB> :bprevious<CR>
 noremap <Leader>D :bd<CR>
 nmap <C-w><Left> <C-w>h
