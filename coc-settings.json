@@ -1,4 +1,5 @@
 {
   "tsserver.npm": "~/.config/nvm/10.17.0/bin/npm" ,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript","javascriptreact", "typescript", "typescriptreact"],
+  "eslint.filetypes": ["javascript","javascriptreact", "typescript", "typescriptreact"],
+  "eslint.autoFixOnSave": true
 }
