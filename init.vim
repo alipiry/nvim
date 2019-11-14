@@ -95,7 +95,7 @@ nmap 3 3gt
 noremap <Leader><TAB> :tabNext<CR>
 noremap <TAB> :bnext<CR>
 noremap <S-TAB> :bprevious<CR>
-noremap <Leader>D :bd<CR>
+noremap <Leader>d :bd<CR>
 nmap <C-w><Left> <C-w>h
 nmap <C-w><Down> <C-w>j
 nmap <C-w><Up> <C-w>k
