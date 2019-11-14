@@ -82,7 +82,7 @@ noremap <Leader>gl :Commits<CR>
 noremap <Leader>gch :Gread<CR>
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gco :Gcommit<CR>
-noremap <Leader>df :Gdiff<CR>
+noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>b :History<CR>
 noremap <Leader>t :tabnew<CR>
 nmap <silent> gd <Plug>(coc-definition)
