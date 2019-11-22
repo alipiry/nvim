@@ -100,12 +100,6 @@ nmap <C-w><Left> <C-w>h
 nmap <C-w><Down> <C-w>j
 nmap <C-w><Up> <C-w>k
 nmap <C-w><Right> <C-w>l
-inoremap ' ''<Left>
-inoremap " ""<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap ( ()<Left>
-
 
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
