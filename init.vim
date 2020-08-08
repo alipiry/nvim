@@ -23,6 +23,7 @@ filetype plugin on
 filetype indent on
 
 set termguicolors
+set arabicshape!
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 colorscheme gruvbox
