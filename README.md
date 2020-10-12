@@ -13,6 +13,12 @@ Clone the repo and do the following commands:
 	ln -sf ~/nvim/ ~/.config/
 ```
 
+Make sure you have [`vim-plug`](https://github.com/junegunn/vim-plug) installed on your machine:
+```
+	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
 Now the only thing you should do is open your `NEOVIM` and run `:PlugInstall`:
 ```bash
 	nvim
