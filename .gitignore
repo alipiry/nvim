@@ -2,3 +2,4 @@
 autoload/plug**
 .netrwhist
 plugged/*
+plugin/*
