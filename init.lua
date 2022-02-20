@@ -2,18 +2,19 @@
 -- yarn global add cspell vscode-langservers-extracted eslint_d rustywind @tailwindcss/language-server typescript-language-server
 -- brew install ripgrep fd
 
+require('impatient')
+
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
 end
 
-require('impatient')
 
 vim.cmd [[
   augroup Packer
-  autocmd!
-  autocmd BufWritePost init.lua PackerCompile
+    autocmd!
+    autocmd BufWritePost init.lua PackerCompile
   augroup end
 ]]
 
@@ -279,7 +280,7 @@ vim.api.nvim_set_keymap('n', '<C-w><Down>', '<C-w>j', mapOpts)
 vim.api.nvim_set_keymap('n', '<C-w><Up>', '<C-w>k', mapOpts)
 vim.api.nvim_set_keymap('n', '<C-w><Right>', '<C-w>l', mapOpts)
 
-vim.api.nvim_set_keymap('n', '<C-f>', [[<cmd>lua require('telescope.builtin').git_files()<CR>]], mapOpts)
+vim.api.nvim_set_keymap('n', '<C-f>', [[<cmd>lua require('telescope.builtin').git_files{ previewer = false }<CR>]], mapOpts)
 vim.api.nvim_set_keymap('n', '<C-s>', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], mapOpts)
 vim.api.nvim_set_keymap('n', '<leader>gs', [[<cmd>lua require('telescope.builtin').git_status()<CR>]], mapOpts)
 vim.api.nvim_set_keymap('n', '<leader>b', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], mapOpts)
