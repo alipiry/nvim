@@ -1,15 +1,31 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    rust = { "rustfmt", lsp_format = "fallback" },
+    typescriptreact = {
+      "eslint_d",
+      "prettierd",
+    },
+    typescript = {
+      "eslint_d",
+      "prettierd",
+    },
+    json = {
+      "prettierd",
+    },
+    javascript = {
+      "eslint_d",
+      "prettierd",
+    },
+    go = { "goimports", "gofumpt" },
   },
-
-  -- format_on_save = {
-  --   -- These options will be passed to conform.format()
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
+  default_format_opts = {
+    lsp_format = "fallback",
+  },
+  format_on_save = {
+    timeout_ms = 500,
+    lsp_fallback = true,
+  },
 }
 
 return options
