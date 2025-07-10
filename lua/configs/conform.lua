@@ -18,6 +18,7 @@ local options = {
       "prettierd",
     },
     go = { "goimports", "gofumpt" },
+    sh = { "shfmt" },
   },
   default_format_opts = {
     lsp_format = "fallback",
