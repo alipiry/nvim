@@ -1,4 +1,4 @@
-# Alipiry's Neovim Configuration
+# My Neovim Configuration
 
 My personal sleek, modern, and feature-rich Neovim configuration built with Lua and powered by [lazy.nvim](https://github.com/folke/lazy.nvim).
 
