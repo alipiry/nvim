@@ -19,7 +19,7 @@ return {
   require "plugins.mason",
   require "plugins.neotree",
   require "plugins.signature",
-  require "plugins.suround",
+  require "plugins.surround",
   require "plugins.telescope",
   require "plugins.theme",
   require "plugins.toggleterm",
