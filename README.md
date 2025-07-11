@@ -2,6 +2,12 @@
 
 My personal sleek, modern, and feature-rich Neovim configuration built with Lua and powered by [lazy.nvim](https://github.com/folke/lazy.nvim).
 
+## Screenshots
+
+![Screenshot 1](1.png)
+![Screenshot 2](2.png)
+![Screenshot 3](3.png)
+
 ## Requirements
 
 - **Neovim** >= 0.9.0
