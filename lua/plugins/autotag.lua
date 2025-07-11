@@ -9,7 +9,7 @@ return {
           enable_rename = true,
           enable_close_on_slash = true,
         },
-        filetypes = { "html", "xml", "javascript", "typescript", "jsx", "tsx", "markdown" },
+        filetypes = { "html", "xml", "javascript", "typescript", "jsx", "tsx", "markdown", },
       }
     end,
   },
