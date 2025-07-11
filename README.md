@@ -99,12 +99,12 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 ### Trouble (Diagnostics)
 | Key | Action |
 |-----|--------|
-| `<leader>tx` | Toggle diagnostics |
-| `<leader>tX` | Toggle buffer diagnostics |
+| `<leader>t` | Toggle diagnostics |
+| `<leader>tx` | Toggle buffer diagnostics |
 | `<leader>ts` | Toggle symbols |
-| `<leader>tl` | Toggle LSP definitions/references |
-| `<leader>tL` | Toggle location list |
-| `<leader>xQ` | Toggle quickfix list |
+| `<leader>td` | Toggle LSP definitions/references |
+| `<leader>tl` | Toggle location list |
+| `<leader>tf` | Toggle quickfix list |
 
 ## ️Configuration Structure
 
