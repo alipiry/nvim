@@ -2,12 +2,12 @@ return {
   "CopilotC-Nvim/CopilotChat.nvim",
   dependencies = {
     { "zbirenbaum/copilot.lua" },
-    { "nvim-lua/plenary.nvim", branch = 'master' },
+    { "nvim-lua/plenary.nvim", branch = "master" },
   },
   opts = {
     debug = false,
     show_help = true,
-    model = 'claude-sonnet-4',
+    model = "claude-sonnet-4",
     prompts = {
       Explain = "Please explain how the following code works.",
       Review = "Please review the following code and provide suggestions for improvement.",
@@ -26,8 +26,8 @@ return {
     },
   },
   config = function(_, opts)
-    local chat = require("CopilotChat")
-    local select = require("CopilotChat.select")
+    local chat = require "CopilotChat"
+    local select = require "CopilotChat.select"
 
     chat.setup(opts)
 
@@ -68,7 +68,7 @@ return {
     end, { desc = "CopilotChat - Refactor selection" })
 
     vim.keymap.set("n", "<leader>cq", function()
-      local input = vim.fn.input("Quick Chat: ")
+      local input = vim.fn.input "Quick Chat: "
       if input ~= "" then
         chat.ask(input)
       end
@@ -83,12 +83,12 @@ return {
         "gpt-4o-mini",
         "gpt-4",
         "gpt-4-turbo",
-        "gemini-2.5-pro"
+        "gemini-2.5-pro",
       }, {
         prompt = "Select AI Model:",
       }, function(choice)
         if choice then
-          require("CopilotChat").setup({ model = choice })
+          require("CopilotChat").setup { model = choice }
           vim.notify("Switched to model: " .. choice)
         end
       end)

@@ -2,7 +2,7 @@ return {
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   dependencies = { "williamboman/mason.nvim" },
   config = function()
-    require("mason-tool-installer").setup({
+    require("mason-tool-installer").setup {
       ensure_installed = {
         "stylua",
         "rustfmt",
@@ -14,6 +14,6 @@ return {
       },
       auto_update = false,
       run_on_start = true,
-    })
+    }
   end,
 }

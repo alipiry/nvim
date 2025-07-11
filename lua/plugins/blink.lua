@@ -7,10 +7,10 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    local blink = require("blink-cmp")
-    local lspkind = require("lspkind")
-    local devicons = require("nvim-web-devicons")
-    blink.setup({
+    local blink = require "blink-cmp"
+    local lspkind = require "lspkind"
+    local devicons = require "nvim-web-devicons"
+    blink.setup {
       keymap = {
         preset = "none",
         ["<C-l>"] = { "show" },
@@ -21,10 +21,6 @@ return {
         ["<Down>"] = { "select_next", "fallback" },
         ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
       },
-      appearance = {
-        use_nvim_cmp_as_default = true,
-        nerd_font_variant = "mono",
-      },
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
       },
@@ -33,10 +29,7 @@ return {
         sorts = {
           "exact",
           function(a, b)
-            if
-                (a.client_name == nil or b.client_name == nil)
-                or (a.client_name == b.client_name)
-            then
+            if (a.client_name == nil or b.client_name == nil) or (a.client_name == b.client_name) then
               return
             end
             return b.client_name == "emmet_ls"
@@ -97,6 +90,6 @@ return {
           },
         },
       },
-    })
+    }
   end,
 }

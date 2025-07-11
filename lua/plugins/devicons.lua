@@ -1,7 +1,7 @@
 return {
   "nvim-tree/nvim-web-devicons",
   config = function()
-    require("nvim-web-devicons").setup({
+    require("nvim-web-devicons").setup {
       color_icons = true,
       default = true,
       strict = true,
@@ -9,16 +9,16 @@ return {
         [".gitignore"] = {
           icon = "",
           color = "#f1502f",
-          name = "Gitignore"
-        }
+          name = "Gitignore",
+        },
       },
       override_by_extension = {
         ["log"] = {
           icon = "",
           color = "#81e043",
-          name = "Log"
-        }
+          name = "Log",
+        },
       },
-    })
+    }
   end,
 }
