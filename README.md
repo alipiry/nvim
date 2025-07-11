@@ -175,4 +175,4 @@ Thanks to the amazing Neovim community and all the plugin authors who make my co
 
 ---
 
-**Happy coding with Neovim! 🎉**
+**Happy coding with Neovim!**
