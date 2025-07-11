@@ -110,35 +110,42 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 
 ```
 ~/.config/nvim/
-├── init.lua                 # Main configuration file
-├── lazy-lock.json          # Plugin version lock file
+├── init.lua                    # Main configuration file
+├── lazy-lock.json             # Plugin version lock file
 ├── lua/
 │   ├── core/
-│   │   ├── keymaps.lua     # Key mappings
-│   │   └── options.lua     # Neovim options
+│   │   ├── keymaps.lua        # Key mappings
+│   │   └── options.lua        # Neovim options
 │   └── plugins/
-│       ├── init.lua        # Plugin loader
-│       ├── alpha.lua       # Start screen
-│       ├── autopairs.lua   # Auto pairs
-│       ├── blink.lua       # Completion
-│       ├── bufferline.lua  # Buffer tabs
-│       ├── colorizer.lua   # Color highlighting
-│       ├── comment.lua     # Commenting
-│       ├── conform.lua     # Formatting
-│       ├── copilot.lua     # GitHub Copilot
-│       ├── copilot-chat.lua# Copilot Chat
-│       ├── lazygit.lua     # Git integration
-│       ├── lsp.lua         # LSP configuration
-│       ├── lualine.lua     # Status line
-│       ├── mason.lua       # LSP server manager
-│       ├── neotree.lua     # File explorer
-│       ├── telescope.lua   # Fuzzy finder
-│       ├── theme.lua       # Color scheme
-│       ├── toggleterm.lua  # Terminal
-│       ├── treesitter.lua  # Syntax highlighting
-│       ├── trouble.lua     # Diagnostics
-│       └── whichkey.lua    # Key helper
-└── README.md               # This file
+│       ├── init.lua           # Plugin loader
+│       ├── alpha.lua          # Start screen
+│       ├── autopairs.lua      # Auto pairs
+│       ├── autotag.lua        # Auto tag closing
+│       ├── blink.lua          # Completion
+│       ├── bufferline.lua     # Buffer tabs
+│       ├── colorizer.lua      # Color highlighting
+│       ├── comment.lua        # Commenting
+│       ├── conform.lua        # Formatting
+│       ├── copilot.lua        # GitHub Copilot
+│       ├── copilot-chat.lua   # Copilot Chat
+│       ├── devicons.lua       # File icons
+│       ├── early-retirement.lua # Plugin management
+│       ├── lazygit.lua        # Git integration
+│       ├── lsp.lua            # LSP configuration
+│       ├── lspkind.lua        # LSP completion icons
+│       ├── lualine.lua        # Status line
+│       ├── mason.lua          # LSP server manager
+│       ├── mason-tool-installer.lua # Mason tool installer
+│       ├── neotree.lua        # File explorer
+│       ├── signature.lua      # Function signature help
+│       ├── surround.lua       # Text objects surrounding
+│       ├── telescope.lua      # Fuzzy finder
+│       ├── theme.lua          # Color scheme
+│       ├── toggleterm.lua     # Terminal
+│       ├── treesitter.lua     # Syntax highlighting
+│       ├── trouble.lua        # Diagnostics
+│       └── whichkey.lua       # Key helper
+└── README.md                  # This file
 ```
 
 ## Customization
