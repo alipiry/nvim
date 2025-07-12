@@ -14,12 +14,11 @@ return {
       keymap = {
         preset = "none",
         ["<C-p>"] = { "show" },
-        ["<Tab>"] = { "select_next" },
-        ["<S-Tab>"] = { "select_prev" },
+        ["<Tab>"] = { "select_next", "fallback" },
+        ["<S-Tab>"] = { "select_prev", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
         ["<Up>"] = { "select_prev", "fallback" },
         ["<Down>"] = { "select_next", "fallback" },
-        ["<C-l"] = { "select_prev", "fallback_to_mappings" },
       },
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
