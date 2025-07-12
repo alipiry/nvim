@@ -18,6 +18,7 @@ return {
   require "plugins.lsp",
   require "plugins.lspkind",
   require "plugins.lualine",
+  require "plugins.luasnip",
   require "plugins.mason-tool-installer",
   require "plugins.mason",
   require "plugins.neotree",
