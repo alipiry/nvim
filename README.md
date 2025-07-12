@@ -112,7 +112,25 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 | `<leader>tl` | Toggle location list |
 | `<leader>tf` | Toggle quickfix list |
 
-## ️Configuration Structure
+### Flash (Navigation)
+| Key | Action |
+|-----|--------|
+| `s` | Flash jump |
+| `S` | Flash treesitter |
+| `r` | Flash remote |
+| `R` | Flash treesitter search |
+
+### Completion (Blink.cmp)
+| Key | Action |
+|-----|--------|
+| `<C-p>` | Show completion menu |
+| `<Tab>` | Select next completion |
+| `<S-Tab>` | Select previous completion |
+| `<CR>` | Accept completion |
+| `<Up>/<Down>` | Navigate completions |
+| `<C-l>` | Select previous with fallback |
+
+## 🔧 Configuration Structure
 
 ```
 ~/.config/nvim/
@@ -127,7 +145,7 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 │       ├── alpha.lua          # Start screen
 │       ├── autopairs.lua      # Auto pairs
 │       ├── autotag.lua        # Auto tag closing
-│       ├── blink.lua          # Completion
+│       ├── blink.lua          # Completion engine (blink.cmp)
 │       ├── bufferline.lua     # Buffer tabs
 │       ├── colorizer.lua      # Color highlighting
 │       ├── comment.lua        # Commenting
@@ -136,13 +154,18 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 │       ├── copilot-chat.lua   # Copilot Chat
 │       ├── devicons.lua       # File icons
 │       ├── early-retirement.lua # Plugin management
-│       ├── lazygit.lua        # Git integration
+│       ├── flash.lua          # Fast navigation
+│       ├── gitsigns.lua       # Git integration
+│       ├── indent-blankline.lua # Indent guides
+│       ├── lazygit.lua        # Git TUI integration
 │       ├── lsp.lua            # LSP configuration
 │       ├── lspkind.lua        # LSP completion icons
 │       ├── lualine.lua        # Status line
+│       ├── luasnip.lua        # Snippet engine
 │       ├── mason.lua          # LSP server manager
 │       ├── mason-tool-installer.lua # Mason tool installer
 │       ├── neotree.lua        # File explorer
+│       ├── noice.lua          # UI improvements
 │       ├── signature.lua      # Function signature help
 │       ├── surround.lua       # Text objects surrounding
 │       ├── telescope.lua      # Fuzzy finder
@@ -150,6 +173,7 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 │       ├── toggleterm.lua     # Terminal
 │       ├── treesitter.lua     # Syntax highlighting
 │       ├── trouble.lua        # Diagnostics
+│       ├── ts-comments.lua    # Better commenting
 │       └── whichkey.lua       # Key helper
 └── README.md                  # This file
 ```
@@ -180,7 +204,7 @@ Modify `lua/core/options.lua` to change Neovim settings like tab size, line numb
 
 ## License
 
-This configuration is available under the [MIT License](LICENSE).
+This configuration is available under the [Unlicense License](LICENSE).
 
 ## Acknowledgments
 

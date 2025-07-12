@@ -13,13 +13,13 @@ return {
     blink.setup {
       keymap = {
         preset = "none",
-        ["<C-l>"] = { "show" },
+        ["<C-p>"] = { "show" },
         ["<Tab>"] = { "select_next" },
         ["<S-Tab>"] = { "select_prev" },
         ["<CR>"] = { "accept", "fallback" },
         ["<Up>"] = { "select_prev", "fallback" },
         ["<Down>"] = { "select_next", "fallback" },
-        ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
+        ["<C-l"] = { "select_prev", "fallback_to_mappings" },
       },
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
