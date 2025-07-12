@@ -17,7 +17,7 @@ return {
     },
     window = {
       position = "left",
-      width = 40,
+      width = 32,
     },
   },
   vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle left<CR>", { desc = "Toggle Neo-tree sidebar" }),

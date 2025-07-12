@@ -16,7 +16,7 @@ return {
         ["<C-l>"] = { "show" },
         ["<Tab>"] = { "select_next" },
         ["<S-Tab>"] = { "select_prev" },
-        ["<CR>"] = { "accept" },
+        ["<CR>"] = { "accept", "fallback" },
         ["<Up>"] = { "select_prev", "fallback" },
         ["<Down>"] = { "select_next", "fallback" },
         ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
