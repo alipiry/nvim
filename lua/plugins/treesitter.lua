@@ -7,6 +7,7 @@ return {
       "bash",
       "css",
       "cmake",
+      "diff",
       "dockerfile",
       "gitignore",
       "go",

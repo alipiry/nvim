@@ -37,5 +37,40 @@ return {
       },
     }
     pcall(telescope.load_extension, "fzf")
+
+    vim.ui.select = function(items, opts, on_choice)
+      local pickers = require("telescope.pickers")
+      local finders = require("telescope.finders")
+      local conf = require("telescope.config").values
+      local actions = require("telescope.actions")
+      local action_state = require("telescope.actions.state")
+
+      pickers.new(opts or {}, {
+        prompt_title = opts and opts.prompt or "Select",
+        finder = finders.new_table {
+          results = items,
+          entry_maker = function(entry)
+            return {
+              value = entry,
+              display = tostring(entry),
+              ordinal = tostring(entry),
+            }
+          end,
+        },
+        sorter = conf.generic_sorter(opts or {}),
+        attach_mappings = function(prompt_bufnr, map)
+          actions.select_default:replace(function()
+            actions.close(prompt_bufnr)
+            local selection = action_state.get_selected_entry()
+            if selection then
+              on_choice(selection.value, selection.index)
+            else
+              on_choice(nil, nil)
+            end
+          end)
+          return true
+        end,
+      }):find()
+    end
   end,
 }

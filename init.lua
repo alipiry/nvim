@@ -19,4 +19,8 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 local plugins = require("plugins")
-require("lazy").setup(plugins)
+require("lazy").setup(plugins, {
+	rocks = {
+		enabled = false,
+	},
+})

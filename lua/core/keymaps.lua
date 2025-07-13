@@ -18,3 +18,7 @@ map("n", "<leader>h", "<C-w>s", { desc = "split window horizontally" })
 map("n", "<leader>se", "<C-w>=", { desc = "make windows equal width" })
 map("v", "p", '"_dP', { desc = "Paste from last yanked text" })
 map("n", ";", ":", { desc = "CMD enter command mode" })
+
+map("n", "gD", vim.lsp.buf.definition, { desc = "Go to definition (builtin LSP)" })
+map("n", "gR", vim.lsp.buf.references, { desc = "Go to references (builtin LSP)" })
+map("n", "gI", vim.lsp.buf.implementation, { desc = "Go to implementation (builtin LSP)" })

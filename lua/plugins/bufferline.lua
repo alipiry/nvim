@@ -31,10 +31,10 @@ return {
         sort_by = "insert_at_end",
       },
     }
-    vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Previous buffer" })
-    vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Next buffer" })
+    vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
+    vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
     vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
-    vim.keymap.set("n", "<leader>b", "<cmd>enew<CR>", { desc = "New buffer" })
+    vim.keymap.set("n", "<leader>bn", "<cmd>enew<CR>", { desc = "New buffer" })
     vim.keymap.set("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", { desc = "Pin buffer" })
   end,
 }

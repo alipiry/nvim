@@ -20,12 +20,21 @@ return {
       key("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
       key("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
       key("n", "K", vim.lsp.buf.hover, opts)
-      key("n", "[d", vim.diagnostic.goto_prev, opts)
-      key("n", "]d", vim.diagnostic.goto_next, opts)
-      key("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-      key("n", "<leader>rn", vim.lsp.buf.rename, opts)
     end
-    local servers = { "html", "cssls", "rust_analyzer", "lua_ls", "tailwindcss", "ts_ls", "gopls" }
+    local servers = {
+      "lua_ls",
+      "rust_analyzer",
+      "gopls",
+      "ts_ls",
+      "html",
+      "cssls",
+      "tailwindcss",
+      "pyright",
+      "jsonls",
+      "bashls",
+      "yamlls",
+      "dockerls",
+    }
     for _, server in ipairs(servers) do
       local server_config = {
         on_attach = on_attach,
@@ -51,6 +60,9 @@ return {
             gofumpt = true,
           },
         }
+      elseif server == "ts_ls" then
+        server_config.single_file_support = false
+        server_config.root_dir = require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json")
       end
       lspconfig[server].setup(server_config)
     end
