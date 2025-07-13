@@ -18,12 +18,29 @@ o.smartcase = true
 o.hlsearch = true
 o.incsearch = true
 o.fileencoding = "utf-8"
-o.cmdheight = 1
 o.backspace = "indent,eol,start"
-opt.laststatus = 3
 o.cmdheight = 0
+opt.laststatus = 3
 opt.termguicolors = true
 opt.showtabline = 2
+opt.colorcolumn = "80"
+opt.history = 1000
+opt.ruler = true
+opt.magic = true
+opt.showmatch = true
+opt.matchtime = 2
+opt.errorbells = false
+opt.visualbell = false
+opt.backup = false
+opt.writebackup = false
+opt.swapfile = false
+opt.textwidth = 160
+opt.completeopt = {
+  "menu",
+  "menuone",
+  "noselect",
+  "noinsert",
+}
 
 api.nvim_create_autocmd("VimEnter", {
   callback = function()
