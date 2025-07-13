@@ -3,22 +3,27 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
+    "saghen/blink.cmp",
   },
   config = function()
     local lspconfig = require "lspconfig"
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    local ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+
+    local ok, blink = pcall(require, "blink.cmp")
     if ok then
-      capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+      capabilities = blink.get_lsp_capabilities(capabilities)
     end
-    local on_attach = function(client, bufnr)
+    local on_attach = function(_, bufnr)
       local opts = { noremap = true, silent = true, buffer = bufnr }
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+      local key = vim.keymap.set
+      key("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts)
+      key("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
+      key("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
+      key("n", "K", vim.lsp.buf.hover, opts)
+      key("n", "[d", vim.diagnostic.goto_prev, opts)
+      key("n", "]d", vim.diagnostic.goto_next, opts)
+      key("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+      key("n", "<leader>rn", vim.lsp.buf.rename, opts)
     end
     local servers = { "html", "cssls", "rust_analyzer", "lua_ls", "tailwindcss", "ts_ls", "gopls" }
     for _, server in ipairs(servers) do

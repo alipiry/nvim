@@ -2,7 +2,7 @@ local map = vim.keymap.set
 
 map("n", "<C-z>", "<cmd>qa!<CR>", { desc = "Quit Neovim" })
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
-map("n", "<leader>sn>", "<cmd>w<CR>", { desc = "Save file without formatting" })
+map("n", "<leader>sn", "<cmd>w<CR>", { desc = "Save file without formatting" })
 map("n", "<C-q>", "<cmd>q<CR>", { desc = "Quit file" })
 map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center cursor" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center cursor" })

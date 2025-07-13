@@ -9,9 +9,9 @@ return {
   cmd = "Telescope",
   keys = {
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-    { "<leader>fw", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
-    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-    { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags" },
+    { "<leader>fw", "<cmd>Telescope live_grep<cr>",  desc = "Live Grep" },
+    { "<leader>fb", "<cmd>Telescope buffers<cr>",    desc = "Buffers" },
+    { "<leader>fh", "<cmd>Telescope help_tags<cr>",  desc = "Help Tags" },
   },
   config = function()
     local telescope = require "telescope"
@@ -23,6 +23,17 @@ return {
         },
         sorting_strategy = "ascending",
         winblend = 0,
+      },
+      pickers = {
+        lsp_definitions = {
+          reuse_win = true,
+        },
+        lsp_references = {
+          reuse_win = true,
+        },
+        lsp_implementations = {
+          reuse_win = true,
+        },
       },
     }
     pcall(telescope.load_extension, "fzf")
