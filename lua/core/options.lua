@@ -35,6 +35,12 @@ opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
 opt.textwidth = 160
+
+opt.undofile = true
+opt.undolevels = 10000
+opt.undoreload = 10000
+opt.undodir = vim.fn.stdpath "data" .. "/undo"
+
 opt.completeopt = {
   "menu",
   "menuone",
@@ -45,6 +51,8 @@ opt.completeopt = {
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
+
+vim.fn.mkdir(vim.fn.stdpath "data" .. "/undo", "p")
 
 api.nvim_create_autocmd("VimEnter", {
   callback = function()

@@ -34,6 +34,9 @@ return {
       "bashls",
       "yamlls",
       "dockerls",
+      "marksman",
+      "emmet_ls",
+      "vimls",
     }
     for _, server in ipairs(servers) do
       local server_config = {

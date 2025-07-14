@@ -65,17 +65,23 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 |-----|--------|
 | `<Space>` | Leader key |
 | `<C-s>` | Save file |
+| `<leader>sn` | Save file without formatting |
 | `<C-q>` | Quit current buffer |
 | `<C-z>` | Quit Neovim |
 | `<leader>x` | Close current buffer |
+| `;` | Enter command mode |
 
 ### Navigation
 | Key | Action |
 |-----|--------|
-| `<C-h/j/k/l>` | Navigate between splits |
+| `<C-h>` | Move to left pane |
+| `<C-j>` | Move to below pane |
+| `<C-k>` | Move to upper pane |
+| `<C-l>` | Move to right pane |
 | `<C-d>` | Scroll down and center |
 | `<C-u>` | Scroll up and center |
-| `n/N` | Find next/previous and center |
+| `n` | Find next and center |
+| `N` | Find previous and center |
 
 ### Window Management
 | Key | Action |
@@ -83,6 +89,11 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 | `<leader>v` | Split window vertically |
 | `<leader>h` | Split window horizontally |
 | `<leader>se` | Make windows equal width |
+
+### File Explorer (Neo-tree)
+| Key | Action |
+|-----|--------|
+| `<C-n>` | Toggle Neo-tree sidebar |
 
 ### File Navigation (Telescope)
 | Key | Action |
@@ -92,15 +103,25 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 | `<leader>fb` | Browse buffers |
 | `<leader>fh` | Help tags |
 
+### Buffer Management
+| Key | Action |
+|-----|--------|
+| `<Tab>` | Next buffer |
+| `<S-Tab>` | Previous buffer |
+| `<leader>bd` | Delete buffer |
+| `<leader>bn` | New buffer |
+| `<leader>bp` | Pin/unpin buffer |
+
 ### LSP (Language Server Protocol)
 | Key | Action |
 |-----|--------|
-| `gd` | Go to definition |
-| `gr` | Go to references |
-| `gi` | Go to implementation |
+| `gd` | Go to definition (Telescope) |
+| `gr` | Go to references (Telescope) |
+| `gi` | Go to implementation (Telescope) |
+| `gD` | Go to definition (builtin LSP) |
+| `gR` | Go to references (builtin LSP) |
+| `gI` | Go to implementation (builtin LSP) |
 | `K` | Hover documentation |
-| `[d` | Previous diagnostic |
-| `]d` | Next diagnostic |
 
 ### Trouble (Diagnostics)
 | Key | Action |
@@ -112,12 +133,12 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 | `<leader>tl` | Toggle location list |
 | `<leader>tf` | Toggle quickfix list |
 
-### Flash (Navigation)
+### Flash (Quick Navigation)
 | Key | Action |
 |-----|--------|
 | `s` | Flash jump |
 | `S` | Flash treesitter |
-| `r` | Flash remote |
+| `r` | Flash remote (operator mode) |
 | `R` | Flash treesitter search |
 
 ### Completion (Blink.cmp)
@@ -127,8 +148,41 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 | `<Tab>` | Select next completion |
 | `<S-Tab>` | Select previous completion |
 | `<CR>` | Accept completion |
-| `<Up>/<Down>` | Navigate completions |
-| `<C-l>` | Select previous with fallback |
+| `<Up>` | Select previous completion |
+| `<Down>` | Select next completion |
+
+### Terminal (ToggleTerm)
+| Key | Action |
+|-----|--------|
+| `<C-\>` | Toggle floating terminal |
+
+### Git (Lazygit)
+| Key | Action |
+|-----|--------|
+| `<leader>gg` | Toggle Lazygit |
+
+### Copilot Chat
+| Key | Action | Mode |
+|-----|--------|------|
+| `<leader>cc` | Toggle Copilot Chat | Normal |
+| `<leader>cr` | Reset Copilot Chat | Normal |
+| `<leader>ce` | Explain code | Normal/Visual |
+| `<leader>co` | Optimize code | Normal/Visual |
+| `<leader>cd` | Add documentation | Normal |
+| `<leader>cf` | Fix code | Visual |
+| `<leader>cr` | Refactor code | Visual |
+| `<leader>cq` | Quick chat | Normal |
+| `<leader>cm` | Model selection | Normal |
+
+### Linting
+| Key | Action |
+|-----|--------|
+| `<leader>l` | Trigger linting for current file |
+
+### Text Editing
+| Key | Action | Mode |
+|-----|--------|------|
+| `p` | Paste from last yanked text | Visual |
 
 ## 🔧 Configuration Structure
 

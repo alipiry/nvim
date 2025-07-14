@@ -22,6 +22,9 @@ return {
           "bashls",
           "yamlls",
           "dockerls",
+          "marksman",
+          "emmet_ls",
+          "vimls",
         },
         automatic_installation = true,
       }

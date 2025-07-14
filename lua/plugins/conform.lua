@@ -33,6 +33,12 @@ return {
       },
       go = { "goimports", "gofumpt" },
       sh = { "shfmt" },
+      python = { "isort", "black" },
+      yaml = { "prettierd" },
+      markdown = { "prettierd" },
+      html = { "prettierd" },
+      css = { "prettierd" },
+      scss = { "prettierd" },
     },
     default_format_opts = {
       lsp_format = "fallback",
