@@ -16,13 +16,23 @@ return {
       FixCode = "Please fix the following code to make it work as intended.",
       FixError = "Please explain the error in the following text and provide a solution.",
       BetterNamings = "Please provide better names for the following variables and functions.",
+
       Documentation = "Please provide documentation for the following code.",
       SwaggerApiDocs = "Please provide documentation for the following API using Swagger.",
       SwaggerJSDoc = "Please write JSDoc for the following API using Swagger.",
+
       Summarize = "Please summarize the following text.",
       Spelling = "Please correct any grammar and spelling errors in the following text.",
       Wording = "Please improve the grammar and wording of the following text.",
       Concise = "Please rewrite the following text to make it more concise.",
+
+      WorkspaceAnalysis = "Analyze the current workspace structure and suggest improvements for organization and maintainability.",
+      ProjectSetup = "Based on the current project, suggest additional tools, dependencies, or configurations that would improve the development workflow.",
+      SecurityReview = "Review the code for potential security vulnerabilities and suggest fixes.",
+      Performance = "Analyze the code for performance issues and suggest optimizations.",
+      Architecture = "Review the overall architecture and suggest improvements for scalability and maintainability.",
+      Dependencies = "Analyze the project dependencies and suggest updates or alternatives.",
+      ConfigReview = "Review configuration files (package.json, tsconfig, etc.) and suggest improvements.",
     },
   },
   config = function(_, opts)
