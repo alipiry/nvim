@@ -166,12 +166,13 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 |-----|--------|------|
 | `<leader>cc` | Toggle Copilot Chat | Normal |
 | `<leader>cr` | Reset Copilot Chat | Normal |
-| `<leader>ce` | Explain code | Normal/Visual |
-| `<leader>co` | Optimize code | Normal/Visual |
-| `<leader>cd` | Add documentation | Normal |
-| `<leader>cf` | Fix code | Visual |
+| `<leader>ce` | Explain code | Visual |
+| `<leader>cf` | Fix code (visual) / Analyze current file (normal) | Visual/Normal |
+| `<leader>co` | Optimize code | Visual |
 | `<leader>cr` | Refactor code | Visual |
 | `<leader>cq` | Quick chat | Normal |
+| `<leader>cp` | Ask about current file | Normal |
+| `<leader>cw` | Ask about workspace | Normal |
 | `<leader>cm` | Model selection | Normal |
 
 ### Linting

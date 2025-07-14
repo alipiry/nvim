@@ -8,6 +8,13 @@ return {
     debug = false,
     show_help = true,
     model = "claude-sonnet-4",
+    window = {
+      layout = "float",
+      width = 0.9,
+      height = 0.9,
+      border = "rounded",
+      title = "CopilotChat",
+    },
     prompts = {
       Explain = "Please explain how the following code works.",
       Review = "Please review the following code and provide suggestions for improvement.",
@@ -26,8 +33,10 @@ return {
       Wording = "Please improve the grammar and wording of the following text.",
       Concise = "Please rewrite the following text to make it more concise.",
 
-      WorkspaceAnalysis = "Analyze the current workspace structure and suggest improvements for organization and maintainability.",
-      ProjectSetup = "Based on the current project, suggest additional tools, dependencies, or configurations that would improve the development workflow.",
+      WorkspaceAnalysis =
+      "Analyze the current workspace structure and suggest improvements for organization and maintainability.",
+      ProjectSetup =
+      "Based on the current project, suggest additional tools, dependencies, or configurations that would improve the development workflow.",
       SecurityReview = "Review the code for potential security vulnerabilities and suggest fixes.",
       Performance = "Analyze the code for performance issues and suggest optimizations.",
       Architecture = "Review the overall architecture and suggest improvements for scalability and maintainability.",
@@ -48,18 +57,6 @@ return {
     vim.keymap.set("n", "<leader>cr", function()
       chat.reset()
     end, { desc = "CopilotChat - Reset" })
-
-    vim.keymap.set("n", "<leader>ce", function()
-      chat.ask("Explain how this code works.", { selection = select.visual })
-    end, { desc = "CopilotChat - Explain code" })
-
-    vim.keymap.set("n", "<leader>co", function()
-      chat.ask("Optimize this code.", { selection = select.visual })
-    end, { desc = "CopilotChat - Optimize code" })
-
-    vim.keymap.set("n", "<leader>cd", function()
-      chat.ask("Please add documentation for this code.", { selection = select.visual })
-    end, { desc = "CopilotChat - Add documentation" })
 
     vim.keymap.set("v", "<leader>ce", function()
       chat.ask("Explain this code.", { selection = select.visual })
@@ -83,6 +80,28 @@ return {
         chat.ask(input)
       end
     end, { desc = "CopilotChat - Quick chat" })
+
+    vim.keymap.set("n", "<leader>cf", function()
+      chat.ask("Please analyze this entire file and provide insights.", {
+        selection = select.buffer
+      })
+    end, { desc = "CopilotChat - Analyze current file" })
+
+    vim.keymap.set("n", "<leader>cp", function()
+      local input = vim.fn.input "Ask about current file: "
+      if input ~= "" then
+        chat.ask(input, { selection = select.buffer })
+      end
+    end, { desc = "CopilotChat - Ask about current file" })
+
+    vim.keymap.set("n", "<leader>cw", function()
+      local input = vim.fn.input "Ask about workspace: "
+      if input ~= "" then
+        chat.ask("Context: Working in a " .. vim.bo.filetype .. " project. " .. input, {
+          selection = select.buffer
+        })
+      end
+    end, { desc = "CopilotChat - Ask about workspace" })
 
     vim.keymap.set("n", "<leader>cm", function()
       vim.ui.select({

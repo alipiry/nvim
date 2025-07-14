@@ -15,7 +15,6 @@ return {
   require "plugins.gitsigns",
   require "plugins.indent-blankline",
   require "plugins.lazygit",
-  require "plugins.lint",
   require "plugins.lsp",
   require "plugins.lspkind",
   require "plugins.lualine",
