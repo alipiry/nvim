@@ -2,6 +2,9 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   main = "nvim-treesitter.configs",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+  },
   opts = {
     ensure_installed = {
       "bash",
@@ -32,7 +35,95 @@ return {
       "yaml",
     },
     auto_install = true,
-    indent = { enable = true },
-    highlight = { enable = true },
+    highlight = {
+      enable = true,
+      additional_vim_regex_highlighting = false,
+    },
+    indent = {
+      enable = true
+    },
+
+    textobjects = {
+      select = {
+        enable = true,
+        lookahead = true,
+        keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+          ["ac"] = "@class.outer",
+          ["ic"] = "@class.inner",
+          ["aa"] = "@parameter.outer",
+          ["ia"] = "@parameter.inner",
+          ["al"] = "@loop.outer",
+          ["il"] = "@loop.inner",
+          ["ai"] = "@conditional.outer",
+          ["ii"] = "@conditional.inner",
+          ["a/"] = "@comment.outer",
+          ["i/"] = "@comment.inner",
+          ["ab"] = "@block.outer",
+          ["ib"] = "@block.inner",
+          ["as"] = "@statement.outer",
+          ["is"] = "@scopename.inner",
+          ["aS"] = "@scope.outer",
+          ["iS"] = "@scope.inner",
+        },
+      },
+      move = {
+        enable = true,
+        set_jumps = true,
+        goto_next_start = {
+          ["]m"] = "@function.outer",
+          ["]]"] = "@class.outer",
+          ["]o"] = "@loop.*",
+          ["]s"] = "@scope.outer",
+          ["]z"] = "@fold",
+        },
+        goto_next_end = {
+          ["]M"] = "@function.outer",
+          ["]["] = "@class.outer",
+          ["]O"] = "@loop.*",
+          ["]S"] = "@scope.outer",
+          ["]Z"] = "@fold",
+        },
+        goto_previous_start = {
+          ["[m"] = "@function.outer",
+          ["[["] = "@class.outer",
+          ["[o"] = "@loop.*",
+          ["[s"] = "@scope.outer",
+          ["[z"] = "@fold",
+        },
+        goto_previous_end = {
+          ["[M"] = "@function.outer",
+          ["[]"] = "@class.outer",
+          ["[O"] = "@loop.*",
+          ["[S"] = "@scope.outer",
+          ["[Z"] = "@fold",
+        },
+      },
+      swap = {
+        enable = true,
+        swap_next = {
+          ["<leader>a"] = "@parameter.inner",
+        },
+        swap_previous = {
+          ["<leader>A"] = "@parameter.inner",
+        },
+      },
+    },
+    fold = {
+      enable = true,
+    },
+    rainbow = {
+      enable = true,
+      extended_mode = true,
+      max_file_lines = nil,
+    },
+    context_commentstring = {
+      enable = true,
+      enable_autocmd = false,
+    },
+    matchup = {
+      enable = true,
+    },
   },
 }
