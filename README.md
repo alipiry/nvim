@@ -180,6 +180,16 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 |-----|--------|
 | `<leader>l` | Trigger linting for current file |
 
+### Treesitter Text Objects
+| Key | Action | Mode |
+|-----|--------|------|
+| `af` | Select function | Visual/Operator |
+| `aa` | Select parameter | Visual/Operator |
+| `ab` | Select block | Visual/Operator |
+| `a` | Select assignment | Visual/Operator |
+| `<leader>a` | Swap next parameter | Normal |
+| `<leader>A` | Swap previous parameter | Normal |
+
 ### Text Editing
 | Key | Action | Mode |
 |-----|--------|------|
