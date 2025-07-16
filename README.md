@@ -4,9 +4,10 @@ My personal sleek, modern, and feature-rich Neovim configuration built with Lua 
 
 ## Screenshots
 
-![Screenshot 1](1.png)
-![Screenshot 2](2.png)
-![Screenshot 3](3.png)
+![Screenshot 1](https://github.com/user-attachments/assets/13eb9d71-4be5-4a2f-bb9b-8a9ec6038ef6)
+![Screenshot 2](https://github.com/user-attachments/assets/3eb9ba89-86a9-4313-b3a6-2b10e96a5a8f)
+![Screenshot 3](https://github.com/user-attachments/assets/6a98f065-69be-4ba0-b446-a8ec326b831e)
+![Screenshot 4](https://github.com/user-attachments/assets/3e8d1bbe-69b9-4092-aa9e-bf101a824ae3)
 
 ## Requirements
 

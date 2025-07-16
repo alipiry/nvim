@@ -9,7 +9,7 @@ return {
         ["@tag"] = { fg = "${yellow}" },
 
         ["@constructor"] = { fg = "${yellow}" },
-        ["@type"] = { fg = "${red}" },
+        ["@type"] = { fg = "${yellow}" },
         ["@type.builtin"] = { fg = "${yellow}" },
 
         ["@keyword.import"] = { fg = "${purple}" },
@@ -43,6 +43,33 @@ return {
         ["@string.go"] = { fg = "${green}" },
         ["@string.import.go"] = { fg = "${green}" },
         ["@type.definition.go"] = { fg = "${yellow}" },
+
+        ["@type.rust"] = { fg = "${yellow}" },
+        ["@type.definition.rust"] = { fg = "${yellow}" },
+        ["@constructor.rust"] = { fg = "${yellow}" },
+        ["@type_identifier.rust"] = { fg = "${yellow}" },
+
+        ["@type.typescript"] = { fg = "${red}" },
+        ["@type.tsx"] = { fg = "${red}" },
+        ["@type.javascript"] = { fg = "${red}" },
+        ["@type.jsx"] = { fg = "${red}" },
+        ["@constructor.typescript"] = { fg = "${red}" },
+        ["@constructor.tsx"] = { fg = "${red}" },
+        ["@constructor.javascript"] = { fg = "${red}" },
+        ["@constructor.jsx"] = { fg = "${red}" },
+        ["@variable.imported.typescript"] = { fg = "${red}" },
+        ["@variable.imported.tsx"] = { fg = "${red}" },
+        ["@variable.imported.javascript"] = { fg = "${red}" },
+        ["@variable.imported.jsx"] = { fg = "${red}" },
+
+        ["@constant.typescript"] = { fg = "${yellow}" },
+        ["@constant.tsx"] = { fg = "${yellow}" },
+        ["@constant.javascript"] = { fg = "${yellow}" },
+        ["@constant.jsx"] = { fg = "${yellow}" },
+        ["@variable.constant.typescript"] = { fg = "${yellow}" },
+        ["@variable.constant.tsx"] = { fg = "${yellow}" },
+        ["@variable.constant.javascript"] = { fg = "${yellow}" },
+        ["@variable.constant.jsx"] = { fg = "${yellow}" },
       },
     }
     vim.cmd "colorscheme onedark_dark"
