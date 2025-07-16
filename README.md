@@ -161,19 +161,13 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 |-----|--------|
 | `<leader>gg` | Toggle Lazygit |
 
-### Copilot Chat
+### CodeCompanion
 | Key | Action | Mode |
 |-----|--------|------|
-| `<leader>cc` | Toggle Copilot Chat | Normal |
-| `<leader>cr` | Reset Copilot Chat | Normal |
-| `<leader>ce` | Explain code | Visual |
-| `<leader>cf` | Fix code (visual) / Analyze current file (normal) | Visual/Normal |
-| `<leader>co` | Optimize code | Visual |
-| `<leader>cr` | Refactor code | Visual |
-| `<leader>cq` | Quick chat | Normal |
-| `<leader>cp` | Ask about current file | Normal |
-| `<leader>cw` | Ask about workspace | Normal |
-| `<leader>cm` | Model selection | Normal |
+| `<leader>cc` | Toggle CodeCompanion Chat | Normal |
+| `<leader>ca` | CodeCompanion Actions | Normal/Visual |
+| `<leader>cf` | Fix Code | Visual |
+| `<leader>cr` | Refactor Code | Visual |
 
 ### Linting
 | Key | Action |
@@ -212,11 +206,11 @@ sudo pacman -S neovim ripgrep fd git nodejs npm
 │       ├── autotag.lua        # Auto tag closing
 │       ├── blink.lua          # Completion engine (blink.cmp)
 │       ├── bufferline.lua     # Buffer tabs
+│       ├── codecompanion.lua  # AI Code Assistant
 │       ├── colorizer.lua      # Color highlighting
 │       ├── comment.lua        # Commenting
 │       ├── conform.lua        # Formatting
 │       ├── copilot.lua        # GitHub Copilot
-│       ├── copilot-chat.lua   # Copilot Chat
 │       ├── devicons.lua       # File icons
 │       ├── early-retirement.lua # Plugin management
 │       ├── flash.lua          # Fast navigation

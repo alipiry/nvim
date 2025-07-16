@@ -11,7 +11,7 @@ return {
         dismiss = "<C-e>",
       },
     },
-    panel = { enabled = true },
+    panel = { enabled = false },
     filetypes = { ["*"] = true },
   },
 }
