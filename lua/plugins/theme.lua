@@ -6,10 +6,10 @@ return {
       highlights = {
         ["@tag.builtin"] = { fg = "${red}" },
         ["@tag.html"] = { fg = "${red}" },
-        ["@tag"] = { fg = "${red}" },
+        ["@tag"] = { fg = "${yellow}" },
 
         ["@constructor"] = { fg = "${yellow}" },
-        ["@type"] = { fg = "${yellow}" },
+        ["@type"] = { fg = "${red}" },
         ["@type.builtin"] = { fg = "${yellow}" },
 
         ["@keyword.import"] = { fg = "${purple}" },
@@ -25,10 +25,11 @@ return {
         ["@variable.parameter"] = { fg = "${red}" },
         ["@variable.member"] = { fg = "${red}" },
         ["@variable.builtin"] = { fg = "${red}" },
-        ["@function.call"] = { fg = "${red}" },
-        ["@function"] = { fg = "${red}" },
-        ["@method.call"] = { fg = "${red}" },
-        ["@method"] = { fg = "${red}" },
+        ["@variable.imported"] = { fg = "${red}" },
+        ["@function.call"] = { fg = "${blue}" },
+        ["@function"] = { fg = "${blue}" },
+        ["@method.call"] = { fg = "${blue}" },
+        ["@method"] = { fg = "${blue}" },
 
         ["@tag.attribute"] = { fg = "${red}" },
         ["@property"] = { fg = "${red}" },
@@ -41,6 +42,7 @@ return {
 
         ["@string.go"] = { fg = "${green}" },
         ["@string.import.go"] = { fg = "${green}" },
+        ["@type.definition.go"] = { fg = "${yellow}" },
       },
     }
     vim.cmd "colorscheme onedark_dark"
