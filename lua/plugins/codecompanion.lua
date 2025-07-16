@@ -42,8 +42,8 @@ return {
   },
   keys = {
     { "<leader>cc", "<cmd>CodeCompanionChat Toggle<cr>", desc = "Toggle CodeCompanion Chat", mode = "n" },
-    { "<leader>ca", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions in normal mode", mode = "n" },
-    { "<leader>ca", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions in visual mode", mode = "v" },
+    { "<leader>cA", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions in normal mode", mode = "n" },
+    { "<leader>cA", "<cmd>CodeCompanionActions<cr>", desc = "CodeCompanion Actions in visual mode", mode = "v" },
     { "<leader>cf", ":'<,'>CodeCompanion /buffer fix this code<cr>", desc = "Fix Code", mode = "v" },
     { "<leader>cr", ":'<,'>CodeCompanion /buffer refactor this code<cr>", desc = "Refactor Code", mode = "v" },
   },
