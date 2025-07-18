@@ -12,7 +12,7 @@ return {
         model = "claude-sonnet-4-20250514",
         keymaps = {
           send = {
-            modes = { n = "<C-s>", i = "<C-s>" },
+            modes = { n = "<CR>", i = "<C-s>" },
           },
           close = {
             modes = { n = "q", i = "<C-c>" },
