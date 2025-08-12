@@ -128,28 +128,5 @@ return {
       desc = "Switch AI Model",
       mode = "n",
     },
-    {
-      "<leader>cm",
-      function()
-        local models = {
-          "claude-sonnet-4-20250514",
-          "claude-3-7-sonnet",
-          "claude-3-5-sonnet-20241022",
-          "gpt-5",
-          "gpt-4o",
-        }
-
-        vim.ui.select(models, {
-          prompt = "Switch chat model:",
-        }, function(choice)
-          if choice then
-            vim.cmd("CodeCompanionChat " .. choice)
-            vim.notify("Switched chat to: " .. choice)
-          end
-        end)
-      end,
-      desc = "Switch Chat Model",
-      mode = "n",
-    },
   },
 }
