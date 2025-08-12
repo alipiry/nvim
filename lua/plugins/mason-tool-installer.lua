@@ -4,11 +4,8 @@ return {
   config = function()
     require("mason-tool-installer").setup {
       ensure_installed = {
-        -- Lua
         "stylua",
-        -- Rust
         "rustfmt",
-        -- JavaScript/TypeScript
         "prettierd",
         "eslint_d",
         "goimports",
@@ -25,6 +22,7 @@ return {
         "stylelint",
         "markdownlint",
         "hadolint",
+        "clang-format",
       },
       auto_update = false,
       run_on_start = true,

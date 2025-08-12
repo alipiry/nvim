@@ -37,6 +37,7 @@ return {
       "marksman",
       "emmet_ls",
       "vimls",
+      "clangd",
     }
     for _, server in ipairs(servers) do
       local server_config = {

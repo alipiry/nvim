@@ -25,6 +25,7 @@ return {
           "marksman",
           "emmet_ls",
           "vimls",
+          "clang-format",
         },
         automatic_installation = true,
       }
