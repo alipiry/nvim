@@ -70,5 +70,38 @@ return {
       desc = "CodeCompanion",
       mode = "v",
     },
+    {
+      "<leader>cm",
+      function()
+        vim.ui.select({
+          "claude-sonnet-4-20250514",
+          "claude-opus-4-20250514",
+          "claude-3-7-sonnet-20250219",
+          "gpt-5",
+          "gpt-5-mini",
+          "gpt-5-nano",
+          "gpt-4o",
+          "gpt-4.1",
+        }, { prompt = "Select model:" }, function(choice)
+          if choice then
+            require("codecompanion").setup {
+              strategies = {
+                chat = { adapter = "copilot", model = choice },
+                inline = {
+                  adapter = "copilot",
+                  model = choice,
+                },
+                agent = {
+                  adapter = "copilot",
+                  model = choice,
+                },
+              },
+            }
+          end
+        end)
+      end,
+      desc = "Switch CodeCompanion Model",
+      mode = "n",
+    },
   },
 }
