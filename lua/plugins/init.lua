@@ -31,5 +31,6 @@ return {
   require "plugins.treesitter",
   require "plugins.trouble",
   require "plugins.ts-comments",
+  require "plugins.vim-astro",
   require "plugins.whichkey",
 }

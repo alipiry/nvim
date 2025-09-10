@@ -66,7 +66,8 @@ return {
         }
       elseif server == "ts_ls" then
         server_config.single_file_support = false
-        server_config.root_dir = require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json")
+        server_config.root_dir =
+          require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json")
       end
       lspconfig[server].setup(server_config)
     end
