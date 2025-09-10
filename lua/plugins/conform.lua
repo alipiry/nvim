@@ -41,6 +41,7 @@ return {
       html = { "prettierd" },
       css = { "prettierd" },
       scss = { "prettierd" },
+      astro = { "prettierd" },
     },
     default_format_opts = {
       lsp_format = "fallback",

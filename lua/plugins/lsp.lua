@@ -38,6 +38,7 @@ return {
       "emmet_ls",
       "vimls",
       "clangd",
+      "astro",
     }
     for _, server in ipairs(servers) do
       local server_config = {
@@ -68,6 +69,12 @@ return {
         server_config.single_file_support = false
         server_config.root_dir =
           require("lspconfig.util").root_pattern("package.json", "tsconfig.json", "jsconfig.json")
+      elseif server == "astro" then
+        server_config.init_options = {
+          typescript = {
+            tsdk = vim.fn.stdpath "data" .. "/mason/packages/typescript-language-server/node_modules/typescript/lib",
+          },
+        }
       end
       lspconfig[server].setup(server_config)
     end

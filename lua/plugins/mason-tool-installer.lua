@@ -23,6 +23,8 @@ return {
         "markdownlint",
         "hadolint",
         "clang-format",
+        "@astrojs/language-server",
+        "typescript-language-server",
       },
       auto_update = false,
       run_on_start = true,
