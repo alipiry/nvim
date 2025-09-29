@@ -36,7 +36,7 @@ return {
       go = { "goimports", "gofumpt" },
       sh = { "shfmt" },
       python = { "isort", "black" },
-      yaml = { "prettierd" },
+      yaml = { "yamlfmt" },
       markdown = { "prettierd" },
       html = { "prettierd" },
       css = { "prettierd" },
